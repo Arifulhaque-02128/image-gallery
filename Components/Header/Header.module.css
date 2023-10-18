@@ -1,0 +1,45 @@
+.container {
+    background-image: url('/assets/header.png');
+    background-size: 100% 55vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 55vh;
+    width: 99.9vw;
+}
+.textStyle {
+    font-size: 32px;
+    margin-top: 15px;
+}
+
+.boxStyle {
+    color : white; 
+    border : 1px solid white;
+    width: 25vw; 
+    padding : 3%; 
+    position: absolute;
+    right : 25%;
+    top : 22%;
+}
+
+@media screen and (max-width: 800px) {
+    .boxStyle {
+        color : white; 
+        border : 1px solid white;
+        width: 40vw; 
+        padding : 3%; 
+        position: absolute;
+        right : 15%;
+        top : 22%;
+    }
+    .textStyle {
+        font-size: 20px;
+        margin-top: 15px;
+    }
+}
+
+@media screen and (max-width: 1400px) {
+    .textStyle {
+        font-size: 25px;
+        margin-top: 15px;
+    }
+}
