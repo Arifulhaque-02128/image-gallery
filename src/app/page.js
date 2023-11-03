@@ -1,29 +1,15 @@
 import Image from 'next/image'
-import NavBar from '../../Components/NavBar/NavBar'
-import Header from '../../Components/Header/Header'
-import Services from '../../Components/Services/Services'
-import LatestPost from '../../Components/LatestPost/LatestPost'
+import Gallery from '../../Component/Gallery'
+import styles from '../../Component/Gallery.module.css'
 
 export default function Home() {
   return (
-    <main>
-      <div className='flex flex-row justify-center'>
-        <NavBar />
+    <main className='flex justify-center' >
+      <div>
+        <h1 className={styles.textStyle} >My Gallery</h1>
+        <Gallery />
       </div>
-      <div className='flex flex-row justify-center'>
-        {/* Header */}
-        <Header />
-      </div>
-      <div className='flex flex-row justify-center'>
-        {/* services */}
-        <Services />
-      </div>
-
-      <div className='flex flex-row justify-center'>
-        {/* Latest Posts */}
-        <LatestPost />
-      </div>
-      <div style={{width : '100vw', height: '15vh', display : 'flex', flexDirection : "row", justifyContent : 'center', marginBottom : "20px"}}>
+      {/* <div style={{width : '100vw', height: '15vh', display : 'flex', flexDirection : "row", justifyContent : 'center', marginBottom : "20px"}}>
         <Image
             src='/assets/ad1.png'
             alt="Logo"
@@ -32,7 +18,7 @@ export default function Home() {
             sizes='100vw'
             style={{width : '80%', height : '100%'}}
         />
-      </div>
+      </div> */}
     </main>
   )
 }

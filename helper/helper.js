@@ -1,0 +1,1 @@
+export const images = ['/assets/image1.webp', '/assets/image2.webp', '/assets/image3.webp', '/assets/image4.webp', '/assets/image5.webp', '/assets/image6.webp', '/assets/image7.png', '/assets/image8.png', '/assets/image9.png', '/assets/image10.jpeg', '/assets/image11.jpeg']
