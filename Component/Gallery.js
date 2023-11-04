@@ -13,13 +13,15 @@ function Gallery() {
   const dragItem = useRef(null);
   const dragOverItem = useRef(null);
 
+  const [currentItem, setCurrentItem] = useState(null)
+
+  // handle drag start
   const handleDragStart = (e, index) => {
-    dragItem.current = index
-    setTimeout(() => {
-      e.target.style.opacity = 0;
-    }, 100)
+    dragItem.current = index;
+    setCurrentItem(dragItem.current)
   }
 
+  // handle drag and drop 
   const handleDragNdrop = (e) => {
     let _currentImg = [...currentImages]
     const draggedItem = _currentImg.splice(dragItem.current, 1)[0]
@@ -30,7 +32,7 @@ function Gallery() {
     dragOverItem.current = null;
 
     setCurrentImages(_currentImg)
-    e.target.style.opacity = 1;
+    setCurrentItem(null)
   }
 
 
@@ -42,7 +44,7 @@ function Gallery() {
   }
 
   return (
-    <div>
+    <div style={{width: '90vw'}}>
         {
           checkedItems.length > 0 && 
 
@@ -75,7 +77,9 @@ function Gallery() {
                     onDragOver={(e) => e.preventDefault()}
                   > 
 
-                    <div className={styles.itemStyle} >
+                    <div className={styles.itemStyle} 
+                    style={ (currentItem === idx) ? { opacity : 0 } : { opacity : 1 } }
+                    >
                       {/* <h2> {idx} </h2> */}
                         {
                           idx === 0 

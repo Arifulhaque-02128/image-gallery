@@ -29,7 +29,7 @@ function Card({imgInfo, category, checkedInfo}) {
             alt="Image"
             width={0}
             height={0}
-            sizes='15vw'
+            sizes='10vw'
             style={{width : '100%', height : '50%'}}
             className={`${isHovered || checkedItems.includes(imgInfo) ? styles.imageHoverStyle : styles.imageStyle}`}
         />
@@ -39,7 +39,7 @@ function Card({imgInfo, category, checkedInfo}) {
             alt="Image"
             width={0}
             height={0}
-            sizes='15vw'
+            sizes='10vw'
             style={{width : '100%', height : '25%'}}
             className={`${isHovered || checkedItems.includes(imgInfo) ? styles.imageHoverStyle : styles.imageStyle}`}
         />
